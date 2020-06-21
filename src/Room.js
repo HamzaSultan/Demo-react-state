@@ -22,22 +22,31 @@ function Room() {
 
 
 let [isLit, setLit] = useState(false);
-    let [age , setAge] = useState(21);
+    let [Temp , setTemp] = useState(21);
 
 
     return (
         <div className={`room ${isLit? "lit": "dark"}`}> 
             This Room is {isLit? "lit": "dark"}
             <br/>
-            Age: {age}
+            Temp: {Temp}
             <br/>
-            <button onClick={()=> setLit(!isLit) } >Toggle Light</button>
+            <button className="btn" onClick={()=> setLit(!isLit) } >Toggle Light</button>
             <br/>
-            <button onClick={ ()=> {
-                            console.log("Increase age arrow function");
-                            setAge(++age);
+            <button className="btn" onClick={ ()=> {
+                            console.log("Decrease temparature arrow function");
+                            setTemp(--Temp);
                             }}>
-                Increase Age
+                Decrease temparature
+            </button>
+
+            <br/>
+
+            <button className="btn" onClick={ ()=> {
+                            console.log("Increase temparature arrow function");
+                            setTemp(++Temp);
+                            }}>
+                Increase temparature
             </button>
         </div>
         );
