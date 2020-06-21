@@ -29,5 +29,5 @@ jobs:
     - name: Install Surge
       run: npm install -g surge
     - name: Run Surge 
-      run: surge ./ surgelightdark.surge.sh --token ${{secrets.SURGE_TOKEN_2020}}
+      run: surge ./ lightroom.surge.sh --token ${{secrets.SURGE_TOKEN_2020}}
     
